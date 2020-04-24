@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<style>
+
+body {
+    background-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Galeria do site */
+
+
+/* Criando blocos menu */
+.links {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+}
+
+.links label {
+    font-weight: bolder;
+    font-style: oblique;
+    padding: 10px 0;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: all .4s;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: white;
+}
+
+.links label:hover {
+    background-color:#D3D3D3;
+    opacity: .8;
+}
+
+#quem {
+    background-color: 	#363636;
+}
+
+#cursos {
+    background-color: orangered;
+}
+
+/* Sumindo os botões input */
+.scroll input {
+    display: none;
+}
+
+.bloco {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Mantendo o Menu fixo na parte de cima */
+.scroll {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /*overflow: hidden;*/
+}
+
+/* Rolagem suave (Transição) */
+
+.sections{
+    transition: all .4s;
+}
+
+/* Efeito de rolagem */
+
+#rd_css:checked ~ .sections{
+    margin-top: -100vh;
+}
+
+#rd_html:checked ~ .sections{
+    margin-top: -200vh;
+}
+
+#rd_js:checked ~ .sections{
+    margin-top: -300vh;
+}
+
+#rd_react:checked ~ .sections{
+    margin-top: -400vh;
+}
+
+#rd_node:checked ~ .sections{
+    margin-top: -500vh;
+}
+
+#rd_angular:checked ~ .sections{
+    margin-top: -600vh;
+}
+
+
+/* Edição de imagens */
+#logo {
+    position: relative;
+    padding: 0;
+    padding-left: -20px;
+}
+
+
+/* Edição de textos */
+
+
+
+</style>
+
+</head>
+
+<body>
+    <nav class="links">
+        <label for="rd_home"> Home </label>
+        <label for="rd_css"> CSS </label>
+        <label for="rd_html"> HTML </label>
+        <label for="rd_js"> JavaScript </label>
+        <label for="rd_react"> React </label>
+        <label for="rd_node"> NODE </label>
+        <label for="rd_angular"> Angular </label>
+    </nav>
+
+<div class="scroll">
+    <input type="radio" name="grupo" id="rd_home" checked="true">
+    <input type="radio" name="grupo" id="rd_css">
+    <input type="radio" name="grupo" id="rd_html">
+    <input type="radio" name="grupo" id="rd_js">
+    <input type="radio" name="grupo" id="rd_react">
+    <input type="radio" name="grupo" id="rd_node">
+    <input type="radio" name="grupo" id="rd_angular">
+
+<section class="sections">
+    <section class="bloco" id="home">
+        <img id="logo" src="imagens/Capturar.PNG" alt="">
+    </section>
+    <section class="bloco" id="css">
+        <img id="css"src="imagens/css.png" alt="">
+    </section>
+    <section class="bloco" id="html">
+        <img id="html"src="imagens/html.png" alt="">
+    </section>
+    <section class="bloco" id="js">
+        <img id="js"src="imagens/js.png" alt="">
+    </section>
+    <section class="bloco" id="react">
+        <img id="react"src="imagens/react.png" alt="">
+    </section>
+    <section class="bloco" id="node">
+        <img id="react"src="imagens/node.png" alt="">
+    </section>
+    <section class="bloco" id="angular">
+        <img id="react"src="imagens/angular.png" alt="">
+    </section>
+</section>
+
+
+
+</div>
+
+</body>
+
+</html>
